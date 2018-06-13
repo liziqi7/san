@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://ecomfe.github.io/tutorial/data-method/index.html">
 <meta property="og:site_name" content="San">
 <meta property="og:description" content="San 在组件的 data 上提供了一些数据操作的方法。通过 get 方法可以获取数据；通过 set、splice 等方法修改数据，相应的视图会被自动刷新。 说明：为什么是通过 San 提供的方法操作数据，而不是直接操作数据？因为defineProperty并未被国内常用的浏览器广泛支持，并且我们也并不喜欢这种侵入式的风格，所以我们选择了折中的方式。因此，只有通过 San 提供的方法修改数据，视图">
-<meta property="og:updated_time" content="2018-05-02T13:15:34.000Z">
+<meta property="og:updated_time" content="2018-06-13T02:27:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据操作">
 <meta name="twitter:description" content="San 在组件的 data 上提供了一些数据操作的方法。通过 get 方法可以获取数据；通过 set、splice 等方法修改数据，相应的视图会被自动刷新。 说明：为什么是通过 San 提供的方法操作数据，而不是直接操作数据？因为defineProperty并未被国内常用的浏览器广泛支持，并且我们也并不喜欢这种侵入式的风格，所以我们选择了折中的方式。因此，只有通过 San 提供的方法修改数据，视图">
@@ -192,7 +192,7 @@ var _hmt = _hmt || [];
 <p>在数组末尾插入一条数据。</p>
 <p><code>用法</code>：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">san.defineComponent(&#123;</span><br><span class="line">    addUser: <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.data.push(<span class="string">'users'</span>, &#123;<span class="attr">name</span>: name&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;*&#125; push(&#123;string|Object&#125;expr, &#123;Object?&#125;option)</span><br></pre></td></tr></table></figure>
+<h3 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;*&#125; pop(&#123;string|Object&#125;expr, &#123;Object?&#125;option)</span><br></pre></td></tr></table></figure>
 <p><code>解释</code>：</p>
 <p>在数组末尾弹出一条数据。</p>
 <p><code>用法</code>：</p>
@@ -217,7 +217,7 @@ var _hmt = _hmt || [];
 <p>通过数据项的索引移除一条数据。</p>
 <p><code>用法</code>：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">san.defineComponent(&#123;</span><br><span class="line">    rmAt: <span class="function"><span class="keyword">function</span> (<span class="params">index</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.data.removeAt(<span class="string">'users'</span>, index);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;Array&#125; removeAt(&#123;string|Object&#125;expr, &#123;Array&#125;spliceArgs, &#123;Object?&#125;option)</span><br></pre></td></tr></table></figure>
+<h3 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;Array&#125; splice(&#123;string|Object&#125;expr, &#123;Array&#125;spliceArgs, &#123;Object?&#125;option)</span><br></pre></td></tr></table></figure>
 <p><code>解释</code>：</p>
 <p>向数组中添加或删除项目。</p>
 <p><code>用法</code>：</p>

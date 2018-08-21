@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://ecomfe.github.io/doc/api/index.html">
 <meta property="og:site_name" content="San">
 <meta property="og:description" content="该文档描述了组件的 API，在 San 主模块上暴露的 API 请参考文档 主模块API。 初始化参数data解释： 组件初始化数据。通常在组件反解的场景下使用。 类型： Object 用法： 1234567891011121314var MyComponent = san.defineComponent(&amp;#123;&amp;#125;);var myComponent = new MyComponen">
-<meta property="og:updated_time" content="2018-06-01T03:38:26.000Z">
+<meta property="og:updated_time" content="2018-08-21T02:54:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="组件API">
 <meta name="twitter:description" content="该文档描述了组件的 API，在 San 主模块上暴露的 API 请参考文档 主模块API。 初始化参数data解释： 组件初始化数据。通常在组件反解的场景下使用。 类型： Object 用法： 1234567891011121314var MyComponent = san.defineComponent(&amp;#123;&amp;#125;);var myComponent = new MyComponen">
@@ -233,7 +233,8 @@ var _hmt = _hmt || [];
 <p><code>用法</code>：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> MyApp = san.defineComponent(&#123;</span><br><span class="line">    trimWhitespace: <span class="string">'blank'</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// ,</span></span><br><span class="line">    <span class="comment">// ......</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h3 id="delimiters"><a href="#delimiters" class="headerlink" title="delimiters"></a>delimiters</h3><p><code>解释</code>：</p>
-<p>定义组件模板解析时插值的分隔符。值为2个项的数组，分别为起始分隔符和结束分隔符。默认为 <code>[&#39;, &#39;]</code>。</p>
+<p>定义组件模板解析时插值的分隔符。值为2个项的数组，分别为起始分隔符和结束分隔符。默认为:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'&#123;&#123;'</span>, <span class="string">'&#125;&#125;'</span>]</span><br></pre></td></tr></table></figure>
 <p><code>版本</code>：&gt;= 3.5.0</p>
 <p><code>类型</code>： Array</p>
 <p><code>用法</code>：</p>

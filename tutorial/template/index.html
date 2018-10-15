@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://ecomfe.github.io/tutorial/template/index.html">
 <meta property="og:site_name" content="San">
 <meta property="og:description" content="在模板 HTML 中，我们通过一定的数据绑定语法编写，相应的数据就能在视图上呈现。 场景插值和许多模板引擎一样，插值的语法形式是表达式位于双大括号中，表达式后可以接任意多个过滤器。 1&amp;#123;&amp;#123; expr [[| filter-call1] | filter-call2...] &amp;#125;&amp;#125; 在文本内容区域我们可以使用插值替换。 1&amp;lt;p&amp;gt;Hello &amp;#123">
-<meta property="og:updated_time" content="2018-10-15T03:12:41.341Z">
+<meta property="og:updated_time" content="2018-10-15T06:15:00.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模板">
 <meta name="twitter:description" content="在模板 HTML 中，我们通过一定的数据绑定语法编写，相应的数据就能在视图上呈现。 场景插值和许多模板引擎一样，插值的语法形式是表达式位于双大括号中，表达式后可以接任意多个过滤器。 1&amp;#123;&amp;#123; expr [[| filter-call1] | filter-call2...] &amp;#125;&amp;#125; 在文本内容区域我们可以使用插值替换。 1&amp;lt;p&amp;gt;Hello &amp;#123">
@@ -215,7 +215,7 @@ var _hmt = _hmt || [];
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 普通变量 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;myVariable | html | url&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>filter支持参数传递，参数可以是任何支持的<a href="#表达式">表达式</a>。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- // 假设存在过滤器: comma --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;myVariable | comma(3)&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;myVariable | comma(commaLength)&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;myVariable | comma(commaLength + 1)&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>过滤器在组件声明时注册，具体请参考组件文档。</p>
+<p>过滤器在组件声明时注册，具体请参考<a href="../component/#过滤器">组件文档过滤器章节</a>。</p>
 <h2 id="字符实体"><a href="#字符实体" class="headerlink" title="字符实体"></a>字符实体</h2><p>在我们编写 HTML 时，如果内容中包含 HTML 预留字符或特殊字符，我们需要写字符实体。San 的模板 HTML 是自解析的，由于体积的关系，只支持有限的具名字符实体：</p>
 <ul>
 <li>&amp;lt;</li>

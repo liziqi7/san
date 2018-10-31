@@ -6,19 +6,19 @@
   <meta name="keywords" content="San,JavaScript,Framework,MVVM,Component,Web">
   <link rel="shortcut icon" href="/san/img/favicon.ico" type="image/x-icon" />
   
-  <title>条件 | San</title>
+  <title>Conditional Rendering | San</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="s-if通过 s-if 指令，我们可以为元素指定条件。当条件成立时元素可见，当条件不成立时元素不存在。 提示：当不满足条件时，San 会将元素从当前页面中移除，而不是隐藏。 1&amp;lt;span s-if=&quot;isOK&quot;&amp;gt;Hello San!&amp;lt;/span&amp;gt; s-if 指令的值可以是任何类型的表达式。 1&amp;lt;span s-if=&quot;isReady &amp;amp;&amp;amp; isActiv">
+  <meta name="description" content="s-ifs-if directive can be used for conditional rendering. The element will be rendered if and only if the condition evaluates to true. Note: The element will be removed rather than hidden when the con">
 <meta property="og:type" content="article">
-<meta property="og:title" content="条件">
+<meta property="og:title" content="Conditional Rendering">
 <meta property="og:url" content="http://baidu.github.io/en/tutorial/if/index.html">
 <meta property="og:site_name" content="San">
-<meta property="og:description" content="s-if通过 s-if 指令，我们可以为元素指定条件。当条件成立时元素可见，当条件不成立时元素不存在。 提示：当不满足条件时，San 会将元素从当前页面中移除，而不是隐藏。 1&amp;lt;span s-if=&quot;isOK&quot;&amp;gt;Hello San!&amp;lt;/span&amp;gt; s-if 指令的值可以是任何类型的表达式。 1&amp;lt;span s-if=&quot;isReady &amp;amp;&amp;amp; isActiv">
+<meta property="og:description" content="s-ifs-if directive can be used for conditional rendering. The element will be rendered if and only if the condition evaluates to true. Note: The element will be removed rather than hidden when the con">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-19T08:53:19.532Z">
+<meta property="og:updated_time" content="2018-10-31T01:25:40.050Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="条件">
-<meta name="twitter:description" content="s-if通过 s-if 指令，我们可以为元素指定条件。当条件成立时元素可见，当条件不成立时元素不存在。 提示：当不满足条件时，San 会将元素从当前页面中移除，而不是隐藏。 1&amp;lt;span s-if=&quot;isOK&quot;&amp;gt;Hello San!&amp;lt;/span&amp;gt; s-if 指令的值可以是任何类型的表达式。 1&amp;lt;span s-if=&quot;isReady &amp;amp;&amp;amp; isActiv">
+<meta name="twitter:title" content="Conditional Rendering">
+<meta name="twitter:description" content="s-ifs-if directive can be used for conditional rendering. The element will be rendered if and only if the condition evaluates to true. Note: The element will be removed rather than hidden when the con">
   
     <link rel="alternate" href="/atom.xml" title="San" type="application/atom+xml">
   
@@ -152,7 +152,7 @@ var _hmt = _hmt || [];
 
   
     <h1 class="article-title" itemprop="name">
-      条件
+      Conditional Rendering
     </h1>
   
 
@@ -161,23 +161,23 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="s-if"><a href="#s-if" class="headerlink" title="s-if"></a>s-if</h2><p>通过 <strong>s-if</strong> 指令，我们可以为元素指定条件。当条件成立时元素可见，当条件不成立时元素不存在。</p>
-<p><code>提示</code>：当不满足条件时，San 会将元素从当前页面中移除，而不是隐藏。</p>
+        <h2 id="s-if"><a href="#s-if" class="headerlink" title="s-if"></a>s-if</h2><p><strong>s-if</strong> directive can be used for conditional rendering. The element will be rendered if and only if the condition evaluates to true.</p>
+<p><code>Note</code>: The element will be removed rather than hidden when the condition is not satisfied.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">s-if</span>=<span class="string">"isOK"</span>&gt;</span>Hello San!<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong>s-if</strong> 指令的值可以是任何类型的<a href="../template/#表达式">表达式</a>。</p>
+<p>The <strong>s-if</strong> directive can contain any type of <a href="../template/#Expression">expression</a>.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">s-if</span>=<span class="string">"isReady &amp;&amp; isActive"</span>&gt;</span>Hello San!<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><code>提示</code>：San 的条件判断不是严格的 === false。所以，一切 JavaScript 的假值都会认为条件不成立：0、空字符串、null、undefined、NaN等。</p>
+<p><code>Note</code>：All JavaScript falsy values are considered false: 0, empty string, null, undefined, NaN, etc.</p>
 <h2 id="s-elif"><a href="#s-elif" class="headerlink" title="s-elif"></a>s-elif</h2><p><code>&gt; 3.2.3</code></p>
-<p><strong>s-elif</strong> 指令可以给 <strong>s-if</strong> 增加一个额外条件分支块。<strong>s-elif</strong> 指令的值可以是任何类型的<a href="../template/#表达式">表达式</a>。</p>
+<p><strong>s-elif</strong> directive can be used to add a condition branch for <strong>s-if</strong>. The <strong>s-elif</strong> directive can contain any type of <a href="../template/#Expression">expression</a>.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">s-if</span>=<span class="string">"isActive"</span>&gt;</span>Active<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">s-elif</span>=<span class="string">"isOnline"</span>&gt;</span>Pending<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><code>提示</code>：<strong>s-elif</strong> 指令元素必须跟在 <strong>s-if</strong> 或 <strong>s-elif</strong> 指令元素后，否则将抛出 <strong>elif not match if</strong> 的异常。</p>
+<p><code>Note</code>：<strong>s-elif</strong> element must immediately follow a <strong>s-if</strong> or <strong>s-elif</strong> element. An <strong>elif not match if</strong> exception will be thrown if used otherwise.</p>
 <h2 id="s-else-if"><a href="#s-else-if" class="headerlink" title="s-else-if"></a>s-else-if</h2><p><code>&gt; 3.5.6</code></p>
-<p><strong>s-else-if</strong> 指令是 <strong>s-elif</strong> 指令的别名，效果相同。</p>
+<p><strong>s-else-if</strong> directive is an alias for <strong>s-elif</strong> directive, they’re effectively the same.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">s-if</span>=<span class="string">"isActive"</span>&gt;</span>Active<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">s-else-if</span>=<span class="string">"isOnline"</span>&gt;</span>Pending<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="s-else"><a href="#s-else" class="headerlink" title="s-else"></a>s-else</h2><p><strong>s-else</strong> 指令可以给 <strong>s-if</strong> 增加一个不满足条件的分支块。<strong>s-else</strong> 指令没有值。</p>
+<h2 id="s-else"><a href="#s-else" class="headerlink" title="s-else"></a>s-else</h2><p><strong>s-else</strong> directive can be used to specify a condition-not-satisfied branch for <strong>s-if</strong>. <strong>s-else</strong> have no value.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">s-if</span>=<span class="string">"isOnline"</span>&gt;</span>Hello!<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">s-else</span>&gt;</span>Offline<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><code>提示</code>：<strong>s-else</strong> 指令元素必须跟在 <strong>s-if</strong> 或 <strong>s-elif</strong> 指令元素后，否则将抛出 <strong>else not match if</strong> 的异常。</p>
-<h2 id="虚拟元素"><a href="#虚拟元素" class="headerlink" title="虚拟元素"></a>虚拟元素</h2><p>在 san 中，template 元素在渲染时不会包含自身，只会渲染其内容。对 template 元素应用 if 指令能够让多个元素同时根据条件渲染视图，可以省掉一层不必要的父元素。</p>
+<p><code>Note</code>：<strong>s-else</strong> element must immediately follow a <strong>s-if</strong> or <strong>s-elif</strong> element. An <strong>else not match if</strong> exception will be thrown if used otherwise.</p>
+<h2 id="Virtual-Element"><a href="#Virtual-Element" class="headerlink" title="Virtual Element"></a>Virtual Element</h2><p>In san templates, only contents of <strong>template</strong> are rendered, NOT including the <strong>template</strong> element itself. By applying an <strong>if</strong> directive for <strong>template</strong> element, multiple elements (without a redundant parent element) can be rendered regarding to the <strong>if</strong> condition.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span> <span class="attr">s-if</span>=<span class="string">"num &gt; 10000"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>biiig<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span> <span class="attr">s-elif</span>=<span class="string">"num &gt; 1000"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>biig<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span> <span class="attr">s-elif</span>=<span class="string">"num &gt; 100"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h4</span>&gt;</span>big<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span> <span class="attr">s-else</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h5</span>&gt;</span>small<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
       
@@ -186,7 +186,7 @@ var _hmt = _hmt || [];
 </article>
 
 <aside class="toc-wrap">
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#s-if"><span class="toc-text">s-if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#s-elif"><span class="toc-text">s-elif</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#s-else-if"><span class="toc-text">s-else-if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#s-else"><span class="toc-text">s-else</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#虚拟元素"><span class="toc-text">虚拟元素</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#s-if"><span class="toc-text">s-if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#s-elif"><span class="toc-text">s-elif</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#s-else-if"><span class="toc-text">s-else-if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#s-else"><span class="toc-text">s-else</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Virtual-Element"><span class="toc-text">Virtual Element</span></a></li></ol>
   <a href="#" class="toc-top">
     回到顶部
   </a>

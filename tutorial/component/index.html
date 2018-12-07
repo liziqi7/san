@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="San">
 <meta property="og:description" content="组件是 San 的基本单位，是独立的数据、逻辑、视图的封装单元。从页面的角度看，组件是 HTML 元素的扩展。从功能模式的角度看，组件是一个 ViewModel。 组件定义定义组件最基本的方法是，从 san.Component 继承。San 提供了 san.inherits 方法，用于继承。 12345678910function MyApp(options) &amp;#123;    san.Comp">
 <meta property="og:image" content="http://baidu.github.io/img/life-cycle.png">
-<meta property="og:updated_time" content="2018-12-04T02:45:34.018Z">
+<meta property="og:updated_time" content="2018-12-07T03:06:56.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="组件">
 <meta name="twitter:description" content="组件是 San 的基本单位，是独立的数据、逻辑、视图的封装单元。从页面的角度看，组件是 HTML 元素的扩展。从功能模式的角度看，组件是一个 ViewModel。 组件定义定义组件最基本的方法是，从 san.Component 继承。San 提供了 san.inherits 方法，用于继承。 12345678910function MyApp(options) &amp;#123;    san.Comp">
@@ -279,6 +279,8 @@ var _hmt = _hmt || [];
 <li>owner 可以收到动态子组件 dispatch 的消息</li>
 <li>owner dispose 时，动态子组件将自动 dispose</li>
 </ul>
+<p><code>注意</code>：</p>
+<p>指定 owner 后，不允许将组件 push 到 owner 的 children 中，否则组件 dispose 过程中，会对动态子组件进行多次 dispose 操作。</p>
 <p>source 可以声明动态子组件与 owner 之间的绑定关系：</p>
 <ul>
 <li>数据绑定，含双向绑定</li>

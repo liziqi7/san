@@ -62,6 +62,13 @@ module.exports = {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
+    ],
+    postLoaders:[
+        {
+            test: /\.js$/,
+            enforce: 'post',
+            loader: 'es3ify'
+        }
     ]
   },
   san: {

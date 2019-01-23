@@ -31,9 +31,18 @@ var webpackConfig = merge(baseWebpackConfig, {
       'process.env': env
     }),
     new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
+        compress: {
+            properties: false,
+            warnings: false
+        },
+        output: {
+            beautify: true,
+            quote_keys: true
+        },
+        mangle: {
+            screw_ie8: false
+        },
+        sourceMap: false
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
     // extract css into its own file
